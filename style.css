@@ -1,0 +1,51 @@
+:root {
+    --primary: white;
+}
+
+body {
+    background: #ddd;
+    color: var(--primary);
+    font-family: "Averta CY", sans-serif;
+    font-weight: 700;
+}
+
+.container{
+    border: solid red 1px;
+    background-color: #ff5959;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(2);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+svg polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke: var(--primary);
+    stroke-dasharray: 12, 36; /*Dash 12 & Gap 36*/
+    stroke-dashoffset: 48; /*12+36*/
+    animation: dash 1s linear infinite;
+}
+
+
+@keyframes dash {
+    62.5% {
+        opacity: 0
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
