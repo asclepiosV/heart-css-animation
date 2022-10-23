@@ -1,8 +1,25 @@
+body {
+    background: #ddd;
+    color: #2ca7ff;
+    font-family: "Averta CY", sans-serif;
+    font-weight: 700;
+}
 .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1{
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.container > div{
+    flex-direction: row;
     display: flex;
 }
 
